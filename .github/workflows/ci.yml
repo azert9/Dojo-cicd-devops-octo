@@ -38,3 +38,18 @@ jobs:
       working-directory: ./func-dojo-cicd-skool
     - run: npx eslint ./DojoCicdSkool
       working-directory: ./func-dojo-cicd-skool
+  build:
+    runs-on: ubuntu-latest
+    needs:
+    - eslint
+    steps:
+    - uses: actions/checkout@v3
+    - run: mkdir -p ./reports/eslint
+    - run: npm install
+      working-directory: ./func-dojo-cicd-skool
+    - run: npm run build
+      working-directory: ./func-dojo-cicd-skool
+    - uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: ./func-dojo-cicd-skool/dist
