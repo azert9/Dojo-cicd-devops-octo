@@ -19,3 +19,8 @@ jobs:
       working-directory: ./func-dojo-cicd-skool
     - run: npx jest --coverage --coverage-directory=../reports/jest
       working-directory: ./func-dojo-cicd-skool
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v3
+      with:
+        name: jest-reports
+        path: ./reports/jest
