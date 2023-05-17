@@ -1,5 +1,6 @@
----
 name: CI
+on:
+- push
 jobs:
   function-tests:
     run-on: ubuntu:22.04
