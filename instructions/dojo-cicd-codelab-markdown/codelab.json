@@ -3,13 +3,13 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2023-05-16T20:46:45+02:00",
+  "updated": "2023-05-17T08:21:23Z",
   "id": "dojo-cicd-codelab-markdown",
   "duration": 172,
   "title": "DOJO - CI/CD DevOps",
   "authors": "ANTE",
   "summary": "dojo - cicd devops",
-  "source": "dojo.md",
+  "source": "./dojo.md",
   "theme": "",
   "status": [
     "published"

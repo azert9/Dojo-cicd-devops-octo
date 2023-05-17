@@ -9,7 +9,7 @@
   <title>DOJO - CI/CD DevOps</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -44,7 +44,7 @@
     
       <google-codelab-step label="Presentation" duration="5">
         <h2 is-upgraded>Environment</h2>
-<p>Ce produit comprend une Azure Function App <code>func-dojo-cicd-skool</code> composée d&#39;une fonction en TypeScript nommé <code>DojoCicdSkool</code>.<br> Les developpeurs construisent une API. Pour permettre cela et produire du code de qualité, il faut de l&#39;automatisation et de l&#39;outillage 🛠.<br> Cet outillage, il s&#39;agit généralement d&#39;une pipeline, et on va en construire une en utilisant Github actions pendant ce dojo 💃</p>
+<p>Ce produit comprend une Azure Function App <code>func-dojo-cicd-skool</code> composée d&#39;une fonction en TypeScript nommé <code>DojoCicdSkool</code>.\ Les developpeurs construisent une API. Pour permettre cela et produire du code de qualité, il faut de l&#39;automatisation et de l&#39;outillage 🛠. \ Cet outillage, il s&#39;agit généralement d&#39;une pipeline, et on va en construire une en utilisant Github actions pendant ce dojo 💃</p>
 <p>Le repository a 2 pipelines qui ont besoin d&#39;être créé :</p>
 <ul>
 <li>ci.yml</li>
@@ -88,14 +88,14 @@ leading to multiple integrations per day.
 </code></pre>
 <p class="image-container"><img src="img/f7daecf816c3d06d.png"></p>
 <h2 is-upgraded>Tips</h2>
-<p>Vous pouvez utiliser Makefile pour opérer votre projet et faciliter son utilisation par tous.<br> Par example: <code>$ make test</code></p>
+<p>Vous pouvez utiliser Makefile pour opérer votre projet et faciliter son utilisation par tous.\ Par example: <code>$ make test</code></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Step 2 - Tests automatisés (CI)" duration="15">
         <p><strong>🎯 Objectif</strong> : Je veux obtenir du feedback sur mes tests à chaque commit poussé sur ma branche de travail.</p>
-<p><strong>Rendu attendu à la fin de ce TP2</strong> :<br> En poussant du code sur ma branche de travail, un pipeline doit se lancer automatiquement sur github. Cette pipeline doit permettre d&#39;exécuter les tests avec Jest, comme ceci quand les tests sont au vert :</p>
+<p><strong>Rendu attendu à la fin de ce TP2</strong> : \ En poussant du code sur ma branche de travail, un pipeline doit se lancer automatiquement sur github. Cette pipeline doit permettre d&#39;exécuter les tests avec Jest, comme ceci quand les tests sont au vert :</p>
 <p class="image-container"><img src="img/93e09f70007a9b81.png"></p>
 <p>ℹ️ Tips:</p>
 <ul>
@@ -117,11 +117,11 @@ leading to multiple integrations per day.
 </table>
 <p><strong>🏁 Test de recette</strong> : Si la step <code>function-tests</code> s&#39;exécute bien dans votre pipeline de CI,</p>
 <ul>
-<li>elle devrait arborer une coche verte, <ul>
+<li>elle devrait arborer une coche verte,  <ul>
 <li><img src="img/93e09f70007a9b81.png"></li>
 </ul>
 </li>
-<li>et afficher les logs d&#39;exécution de la commande Jest en console. <ul>
+<li>et afficher les logs d&#39;exécution de la commande Jest en console.  <ul>
 <li><img src="img/20290cf61615b6ca.png"></li>
 </ul>
 </li>
@@ -154,7 +154,7 @@ jobs:
 Vous pourrez y revenir plus tard 📅 🎱 🔮
 </code></pre>
 <ol type="1">
-<li>Dans le job <code>function-tests</code>, faites en sorte que <code>jest</code>  calcule la couverture de tests sur la fonction <code>DojoCicdSkool</code> et produise la mesure de couverture en console. <ol type="1">
+<li>Dans le job <code>function-tests</code>, faites en sorte que <code>jest</code>  calcule la couverture de tests sur la fonction <code>DojoCicdSkool</code> et produise la mesure de couverture en console.  <ol type="1">
 <li>Vous pouvez utiliser <a href="https://jestjs.io/docs/cli" target="_blank">la commande –coverage</a> pour y arriver.</li>
 </ol>
 </li>
@@ -213,7 +213,7 @@ Vous pourrez y revenir plus tard 📅 🎱 🔮
 </ul>
 <p>Cela nous servira pour reproduire cela dans notre pipeline de CI dans le prochain exercice.</p>
 <p>Aide :</p>
-<p>Pour corriger l&#39;erreur <code>error: Unexpected empty arrow function</code>, definir <em>empty function</em> en <code>undefined</code>.<br> Pour corriger l&#39;erreur <code>error: Prefer default export on a file with single export</code>, vous pouvez créer une <strong><em>rule</em></strong> dans le fichier <code>.eslintrc.js</code>.</p>
+<p>Pour corriger l&#39;erreur <code>error: Unexpected empty arrow function</code>, definir <em>empty function</em> en <code>undefined</code>. \ Pour corriger l&#39;erreur <code>error: Prefer default export on a file with single export</code>, vous pouvez créer une <strong><em>rule</em></strong> dans le fichier <code>.eslintrc.js</code>.</p>
 
 
       </google-codelab-step>
@@ -226,7 +226,7 @@ Vous pourrez y revenir plus tard 📅 🎱 🔮
 <li>d&#39;exécuter les tests avec Jest,</li>
 <li>puis si les tests sont verts; exécuter les étapes de mesure la qualité du code dans un stage <code>code-quality</code> comme ceci :</li>
 </ul>
-<p class="image-container"><img src="img/2e6d42508b61b185.png"></p>
+<p class="image-container"><img src="img/38f4fac80c9ccf4a.png"></p>
 <ul>
 <li>✅ Le stage <code>code-quality</code> sera vert si votre base de code respecte les standards de es-lint, audit-ci, sonar (en bonus).</li>
 <li>🔴 Le stage <code>code-quality</code> sera rouge si l&#39;un de ces outils d&#39;analyse relève au moins 1 warning.</li>
@@ -264,7 +264,7 @@ npm run build
 <p>🏁 <strong>Objectif 1 : Packagez l&#39;application en local.</strong></p>
 <p>🍜 Test de recette : un dossier de la fonction devrait être apparu dans le dossier dist/ ❗️</p>
 <p>🏁 <strong>Objectif 2 : Changez la version de l&#39;application en 1.18.27 avant de la packager.</strong></p>
-<p>ℹ️ Tips: vous pouvez utiliser la commande <code>npm version patch</code><br> 🍜 Test de recette : le package possède la version <strong>1.18.27</strong>, use <code>npm version</code></p>
+<p>ℹ️ Tips: vous pouvez utiliser la commande <code>npm version patch</code> \ 🍜 Test de recette : le package possède la version <strong>1.18.27</strong>, use <code>npm version</code></p>
 
 
       </google-codelab-step>
@@ -300,10 +300,10 @@ npm run build
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
-  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

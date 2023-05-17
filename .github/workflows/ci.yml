@@ -1,2 +1,11 @@
 ---
 name: CI
+jobs:
+  function-tests:
+    run-on: ubuntu:22.04
+    steps:
+    - uses: actions/checkout@v3
+    - run: npm install
+      working-directory: ./func-dojo-cicd-skool
+    - run: npm test
+      working-directory: ./func-dojo-cicd-skool
