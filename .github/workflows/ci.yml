@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-	- run: mkdir -p ./reports/jest
+    - run: mkdir -p ./reports/jest
     - run: npm install
       working-directory: ./func-dojo-cicd-skool
     - run: npx jest --coverage --coverage-directory=../reports/jest
