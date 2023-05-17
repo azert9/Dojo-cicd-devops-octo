@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
     - function-tests
-	continue-on-error: true
+    continue-on-error: true
     steps:
     - uses: actions/checkout@v3
     - run: mkdir -p ./reports/eslint
