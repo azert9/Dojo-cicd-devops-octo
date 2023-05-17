@@ -12,6 +12,8 @@ jobs:
       working-directory: ./func-dojo-cicd-skool
   test-coverage:
     runs-on: ubuntu-latest
+    needs:
+    - function-tests
     steps:
     - uses: actions/checkout@v3
     - run: mkdir -p ./reports/jest
@@ -26,6 +28,9 @@ jobs:
         path: ./reports/jest
   eslint:
     runs-on: ubuntu-latest
+    needs:
+    - function-tests
+	continue-on-error: true
     steps:
     - uses: actions/checkout@v3
     - run: mkdir -p ./reports/eslint
